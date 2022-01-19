@@ -1,0 +1,26 @@
+include common/header.pug
+include common/navbar.pug
+
+html
+  +header()
+  body
+    +navbar()
+    h2 Add a gift
+    form(action="/gift", method="post", enctype="multipart/form-data")
+      p
+          label(for="title") title: 
+          input(type="text", name="title", required=true)
+      p
+          label(for="recipient") recipient: 
+          input(type="text", name="recipient", required=true)
+      p
+          label(for="description") description: 
+          textarea(type="text", name="description", required=false)
+      p
+          label(for="image") image: 
+          input(type="file", name="image", required=false)
+      p
+          label(for="date") date: 
+          input(type="date", name="date", required=false)
+      p
+        input(type="submit", name="submit", required=true)

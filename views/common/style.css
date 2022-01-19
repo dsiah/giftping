@@ -1,0 +1,45 @@
+html > * {
+    font-family: monospace;
+}
+
+pre {
+    background-color: lightgray;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+h3 {
+    text-transform: capitalize;
+}
+
+.gift-info > h3 > button {
+    margin-left: 2%;
+    float:right;
+}
+
+
+.gift-info {
+    width: 50%;
+}
+
+form {
+    display: table;
+    border-spacing: 10px 5px;
+}
+
+form > p {
+    display: table-row;
+}
+
+p > label {
+    display: table-cell;
+    vertical-align: top;
+}
+
+p > input {
+    display: table-cell;
+}
+
+.navbar > a {
+    margin-right: 3%;
+}

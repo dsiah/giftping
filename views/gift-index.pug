@@ -1,0 +1,23 @@
+include common/header.pug
+include common/navbar.pug
+
+html
+  +header()
+  script.
+    function remove(id) {
+      fetch('/gift/' + id, {
+        method: 'DELETE',
+      })
+      .then(res => res.text())
+      .then(() => window.location.replace('/'))
+    }
+  body
+    +navbar()
+    h1 View Your Gifts 🎁
+    each gift in gifts
+      div.gift-info
+        h3 #{gift.title} for #{gift.recipient}
+          button(onclick=`remove(${gift.gid})`) X
+        pre= JSON.stringify(gift, null, 2)
+        //- div= gift.description 
+        //- img(src='1641721150813.HEIC')
